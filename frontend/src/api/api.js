@@ -16,7 +16,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://moviereviewapp-6tq7.onrender.com",
 });
 
 // attach JWT token to every request
