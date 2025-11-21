@@ -1,0 +1,3 @@
+# This is your .gitignore file
+.env
+node_modules/

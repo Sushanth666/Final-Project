@@ -1,0 +1,112 @@
+/* If using Tailwind v4 plugin approach */
+@import "tailwindcss";
+/* src/index.css */
+
+/* src/index.css */
+
+/* These Tailwind imports must stay at the top */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* --- ALTERNATE WAY ---
+  Use plain CSS instead of @apply.
+  This will remove all linter warnings.
+*/
+body {
+  /* --- Light Mode (Default) --- */
+  background-color: white;
+  color: rgb(231, 222, 222);
+
+  /* --- Optional: Smooth transition --- */
+  transition-property: color, background-color;
+  transition-duration: 300ms;
+}
+
+/* This looks for the .dark class on the <html> tag,
+  which your Navbar.jsx is already doing.
+*/
+html.dark body {
+  /* --- Dark Mode --- */
+  background-color: black;
+  color: white;
+}
+/* small helpers */
+html,
+body,
+#root {
+  height: 100%;
+}
+/* Add this to your index.css file */
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-bottom {
+  /* Tells the animation to run and then stop at its final state */
+  animation: slide-in-bottom 0.5s ease-out forwards;
+}
+
+/* Optional: Better scrollbar for Firefox */
+html {
+  scrollbar-color: #c084fc #ffffff1a; /* thumb track */
+  scrollbar-width: thin;
+}
+/*
+ * Add this to your index.css or App.css file
+ * It defines the "animate-fade-in-up" animation used in the dashboard.
+*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  /*
+   * 'forwards' ensures the element stays at 100% opacity
+   * after the animation is complete.
+  */
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+
+html, body {
+  background-color: #f9fafb; /* Light base */
+  color: #111827;
+}
+
+html.dark, body.dark {
+  background-color: #0a001a; /* Dark base */
+  color: #ffffff;
+}
+/* Smooth Theme Transition */
+html {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    filter 0.5s ease;
+}
+
+body, div, section, article, aside, main {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
