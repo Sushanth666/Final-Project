@@ -129,7 +129,7 @@
 
       try {
         // 2. Call your new backend route
-        const response = await fetch(`http://localhost:5000/api/db-movies/${id}`);
+        const response = await fetch(`https://moviereviewapp-6tq7.onrender.com/api/db-movies/${id}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
