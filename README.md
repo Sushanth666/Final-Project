@@ -96,11 +96,16 @@ cd frontend
 npm run dev
 
 
-Frontend → http://localhost:5173
+Frontend Live Link -- https://spiffy-cranachan-a0536d.netlify.app
 
-Backend → http://localhost:5000
+Backend Live Link -- https://moviereviewapp-6tq7.onrender.com
+
+GitHub Code Link -- https://github.com/Sushanth666/Final-Project.git
 
 🔗 API Endpoints
+
+API Documentation Link -- https://documenter.getpostman.com/view/47784215/2sB3WyLwxH  
+
 Auth
 Method	Endpoint	Description
 POST	/api/auth/register	Register user
